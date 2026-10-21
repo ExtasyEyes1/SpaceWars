@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Neon Beetle Assault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>NEON BEETLE ASSAULT</h1>
+
+    <section class="hud">
+      <span>Счёт <b id="score">0</b></span>
+      <span>Жизни <b id="lives">3</b></span>
+      <span>Волна <b id="wave">1</b></span>
+      <span>Рекорд <b id="high">0</b></span>
+      <span>Деньги <b id="money">0</b></span>
+      <span>Бомбы <b id="bombs">0</b></span>
+      <span>Оружие <b id="weapon">1</b>/4</span>
+    </section>
+
+    <div id="bossHud" class="boss-hud" hidden>
+      <span>БОСС</span>
+      <div><i id="bossFill"></i></div>
+    </div>
+
+    <div class="stage">
+      <canvas id="game" width="900" height="600"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="menu">
+          <h2 id="title">NEON BEETLE ASSAULT</h2>
+          <p id="message" class="muted">Выберите режим и нажмите старт</p>
+
+          <div class="menu-actions">
+            <button id="start" class="primary">Старт</button>
+            <button id="mode">Кампания 5 волн</button>
+            <button id="menu" class="ghost" hidden>В меню</button>
+            <button id="resume" hidden>Продолжить</button>
+            <button id="restart" hidden>Заново</button>
+          </div>
+
+          <div class="shop">
+            <div class="shop-head">
+              <strong>МАГАЗИН КОРАБЛЯ</strong>
+              <span class="credits">Баланс: <b id="shopMoney">0</b> кредитов</span>
+            </div>
+            <div class="ship-previews">
+              <button class="skin" data-skin="cyan" data-cost="0">
+                <canvas width="90" height="64"></canvas>
+                <span>Неон · бесплатно</span>
+              </button>
+              <button class="skin" data-skin="violet" data-cost="5">
+                <canvas width="90" height="64"></canvas>
+                <span>Плазма · 5</span>
+              </button>
+              <button class="skin" data-skin="gold" data-cost="7">
+                <canvas width="90" height="64"></canvas>
+                <span>Солнце · 7</span>
+              </button>
+              <button class="skin" data-skin="coral" data-cost="9"><canvas width="70" height="54"></canvas><span>Коралл · 9</span></button>
+              <button class="skin" data-skin="lime" data-cost="11"><canvas width="70" height="54"></canvas><span>Лайм · 11</span></button>
+              <button class="skin" data-skin="rose" data-cost="13"><canvas width="70" height="54"></canvas><span>Розовый кварц · 13</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint">← → / A D — движение · Space — огонь · E — бомба · P — пауза</p>
+
+    <div class="touch">
+      <button data-control="left">◀</button>
+      <button data-control="fire">🔥</button>
+      <button data-control="right">▶</button>
+      <button data-control="bomb">💣</button>
+    </div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

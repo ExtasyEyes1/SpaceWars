@@ -1,0 +1,1 @@
+export const rects=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;export const circleRect=(c,r)=>{const x=Math.max(r.x,Math.min(c.x,r.x+r.w)),y=Math.max(r.y,Math.min(c.y,r.y+r.h));return (c.x-x)**2+(c.y-y)**2<c.r**2}
